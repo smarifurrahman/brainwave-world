@@ -5,10 +5,10 @@ const Login = () => {
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col">
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <form className="card-body p-12 pb-0 mb-6">
+                <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
+                    <form className="card-body p-12 pb-0 mb-6 sm:w-[400px]">
                         <div className="text-center">
-                            <h1 className="text-3xl font-bold">Login your account</h1>
+                            <h1 className="text-3xl font-bold">Login</h1>
                             <hr className='mt-5' />
                         </div>
                         <div className="form-control">

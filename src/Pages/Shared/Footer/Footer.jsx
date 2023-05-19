@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className='col-span-2'>
                     <h3 className='text-white mb-5 text-2xl font-bold'>Brainwave World</h3>
                     <p className='mb-5 text-justify'>Embark on a Journey of Knowledge and Wonder at Brainwave World: Where Learning and Fun Intersect with an Array of Engaging Educational Toys!</p>
-                    <img src="/assets/Icons/social.png" alt="" />
+                    <img src="/assets/icons/social.png" alt="" />
                 </div>
                 <div className='flex flex-col gap-4'>
                     <h5 className='text-lg font-semibold text-white'>Company</h5>
