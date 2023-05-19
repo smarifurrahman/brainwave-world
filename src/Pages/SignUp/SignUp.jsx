@@ -6,7 +6,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 const SignUp = () => {
 
     const [error, setError] = useState('');
-    const { createUser, updateUser } = useContext(AuthContext);
+    const { createUser, updateUser, googleSignIn } = useContext(AuthContext);
 
     const handleSignUp = event => {
         event.preventDefault();
@@ -43,6 +43,18 @@ const SignUp = () => {
                 setError(error.message);
             })
 
+    }
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                const createdUser = result.user;
+                console.log(createdUser);
+            })
+            .catch(error => {
+                console.error(error.message);
+                setError(error.message);
+            })
     }
 
     return (
@@ -88,7 +100,7 @@ const SignUp = () => {
                         <p className='text-center mt-2'>or Continue with</p>
                         <div className='flex gap-3 justify-center'>
                             <div className="form-control mt-4">
-                                <button className="btn text-primary-color hover:text-white bg-white hover:bg-primary-color border-primary-color hover:border-primary-color px-6">
+                                <button onClick={handleGoogleSignIn} className="btn text-primary-color hover:text-white bg-white hover:bg-primary-color border-primary-color hover:border-primary-color px-6">
                                     <FaGoogle className='text-2xl' />
                                 </button>
                             </div>
