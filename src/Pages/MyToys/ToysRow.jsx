@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const ToysRow = ({ toy, handleDelete }) => {
 
@@ -23,7 +24,7 @@ const ToysRow = ({ toy, handleDelete }) => {
             <td>{toyRating}</td>
             <th>
                 <div className="flex flex-col gap-2 w-fit">
-                    <button className="btn btn-ghost btn-xs bg-primary-color">Update</button>
+                    <Link to={`/updateToy/${_id}`} className="btn btn-ghost btn-xs bg-primary-color">Update</Link>
                     <button onClick={() => handleDelete(_id)} className="btn btn-ghost btn-xs bg-secondary-color">Delete</button>
                 </div>
             </th>

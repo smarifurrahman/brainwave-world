@@ -31,6 +31,7 @@ const UpdateToy = () => {
                 if (data.modifiedCount > 0) {
                     // setToys(newToys);
                     console.log('success');
+                    history.back();
                 }
             })
 
