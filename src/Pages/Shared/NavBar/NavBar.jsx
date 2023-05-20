@@ -10,7 +10,7 @@ const NavBar = () => {
     const navItems = <>
         <li><ActiveRoute to="/">Home</ActiveRoute></li>
         <li><ActiveRoute to="/toys">All Toys</ActiveRoute></li>
-        <li><ActiveRoute to="/">My Toys</ActiveRoute></li>
+        <li><ActiveRoute to="/myToys">My Toys</ActiveRoute></li>
         <li><ActiveRoute to="/addToy">Add A Toy</ActiveRoute></li>
         <li><ActiveRoute to="/blogs">Blogs</ActiveRoute></li>
         {
