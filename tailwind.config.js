@@ -18,6 +18,7 @@ export default {
         'footer-white': 'rgba(255, 255, 255, 0.7)',
         'primary-color': '#4acdd5',
         'secondary-color': '#ff6799',
+        'white-secondary': '#fafafa',
       },
       fontFamily: {
         'manrope': ['Manrope', 'sans-serif'],
