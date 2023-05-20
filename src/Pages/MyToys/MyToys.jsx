@@ -1,10 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import ToysRow from "./ToysRow";
+import Spinner from "../Shared/Spinner/Spinner";
 
 const MyToys = () => {
     const [toys, setToys] = useState([]);
     const { user } = useContext(AuthContext);
+    const [loading, setLoading] = useState(true);
 
     const url = `http://localhost:5000/toys?email=${user.email}`;
     useEffect(() => {
@@ -12,10 +14,15 @@ const MyToys = () => {
             .then(res => res.json())
             .then(data => {
                 setToys(data);
+                setLoading(false)
             })
     }, [url])
 
     console.log(toys);
+
+    if (loading) {
+        return <Spinner></Spinner>;
+    }
 
     return (
         <div className='w-[85%] mx-auto'>
