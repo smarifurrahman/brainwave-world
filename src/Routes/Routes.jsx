@@ -45,7 +45,7 @@ const router = createBrowserRouter([
             {
                 path: 'toys/:id',
                 element: <PrivateRoutes><ToyDetails></ToyDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+                loader: ({ params }) => fetch(`https://brainwave-world-server.vercel.app/toys/${params.id}`)
             },
             {
                 path: 'myToys',
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
             {
                 path: 'updateToy/:id',
                 element: <PrivateRoutes><UpdateToy></UpdateToy></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+                loader: ({ params }) => fetch(`https://brainwave-world-server.vercel.app/toys/${params.id}`)
             }
         ]
     },

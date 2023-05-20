@@ -34,7 +34,7 @@ const AddToy = () => {
 
         console.log(toyInfo);
 
-        fetch('http://localhost:5000/addToy', {
+        fetch('https://brainwave-world-server.vercel.app/addToy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -9,7 +9,7 @@ const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [loading, setLoading] = useState(true);
 
-    const url = `http://localhost:5000/toys?email=${user.email}`;
+    const url = `https://brainwave-world-server.vercel.app/toys?email=${user.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -33,7 +33,7 @@ const MyToys = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/toys/${id}`, {
+                fetch(`https://brainwave-world-server.vercel.app/toys/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

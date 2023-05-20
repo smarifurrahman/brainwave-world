@@ -18,7 +18,7 @@ const UpdateToy = () => {
         const toyRating = form.toyRating.value;
         const availableQuantity = form.availableQuantity.value;
 
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://brainwave-world-server.vercel.app/toys/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
