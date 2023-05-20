@@ -19,16 +19,32 @@ const AddToy = () => {
         const availableQuantity = form.availableQuantity.value;
         const toyDescription = form.toyDescription.value;
 
-        console.log(toyPhoto,
+        const toyInfo = {
+            toyPhoto,
             toyName,
             sellerName,
             sellerEmail,
+            sellerPhoto: user.photoURL,
             toyCategory,
             toyPrice,
             toyRating,
             availableQuantity,
             toyDescription,
-            user)
+        }
+
+        console.log(toyInfo);
+
+        fetch('http://localhost:5000/addToy', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(toyInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
 
     }
 
