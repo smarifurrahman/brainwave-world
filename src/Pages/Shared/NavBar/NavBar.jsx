@@ -11,7 +11,7 @@ const NavBar = () => {
         <li><ActiveRoute to="/">Home</ActiveRoute></li>
         <li><ActiveRoute to="/">All Toys</ActiveRoute></li>
         <li><ActiveRoute to="/">My Toys</ActiveRoute></li>
-        <li><ActiveRoute to="/">Add A Toy</ActiveRoute></li>
+        <li><ActiveRoute to="/addToy">Add A Toy</ActiveRoute></li>
         <li><ActiveRoute to="/blogs">Blogs</ActiveRoute></li>
         {
             user ? "" :
