@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
     const [error, setError] = useState('');
@@ -26,6 +27,11 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                Swal.fire(
+                    'Email Login Successful!',
+                    'Your have been logged in successfully.',
+                    'success'
+                )
                 form.reset();
                 navigate(from, { replace: true })
             })
@@ -40,6 +46,11 @@ const Login = () => {
             .then(result => {
                 const createdUser = result.user;
                 console.log(createdUser);
+                Swal.fire(
+                    'Google Login Successful!',
+                    'Your have been logged in successfully.',
+                    'success'
+                )
                 navigate(from, { replace: true })
             })
             .catch(error => {
@@ -53,6 +64,11 @@ const Login = () => {
             .then(result => {
                 const createdUser = result.user;
                 console.log(createdUser);
+                Swal.fire(
+                    'GitHub Login Successful!',
+                    'Your have been logged in successfully.',
+                    'success'
+                )
                 navigate(from, { replace: true })
             })
             .catch(error => {

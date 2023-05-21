@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateToy = () => {
     const [error, setError] = useState('');
@@ -31,6 +32,11 @@ const UpdateToy = () => {
                 if (data.modifiedCount > 0) {
                     // setToys(newToys);
                     console.log('success');
+                    Swal.fire(
+                        'Updated!',
+                        'Your toy has been updated.',
+                        'success'
+                      )
                     history.back();
                 }
             })

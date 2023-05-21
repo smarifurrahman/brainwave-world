@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
 
@@ -32,6 +33,11 @@ const SignUp = () => {
                     .then(() => {
                         console.log('profile updated');
                         form.reset();
+                        Swal.fire(
+                            'Email Login Successful!',
+                            'Your have been logged in successfully.',
+                            'success'
+                        )
                     })
                     .catch(error => {
                         console.error(error.message);
@@ -50,6 +56,11 @@ const SignUp = () => {
             .then(result => {
                 const createdUser = result.user;
                 console.log(createdUser);
+                Swal.fire(
+                    'Google Login Successful!',
+                    'Your have been logged in successfully.',
+                    'success'
+                )
             })
             .catch(error => {
                 console.error(error.message);
@@ -62,6 +73,11 @@ const SignUp = () => {
             .then(result => {
                 const createdUser = result.user;
                 console.log(createdUser);
+                Swal.fire(
+                    'GitHub Login Successful!',
+                    'Your have been logged in successfully.',
+                    'success'
+                )
             })
             .catch(error => {
                 console.error(error.message);
