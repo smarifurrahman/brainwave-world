@@ -20,7 +20,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('https://brainwave-world-server.vercel.app/toys')
             },
             {
                 path: 'login',
