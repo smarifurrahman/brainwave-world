@@ -1,7 +1,9 @@
+import { useContext } from "react";
+import { ToyContext } from "../Home/Home";
 
-const Gallery = ({ toys }) => {
+const Gallery = () => {
+    const { toys } = useContext(ToyContext);
     const imgArray = toys.map(toy => toy.toyPhoto);
-    console.log(imgArray);
 
     return (
         <section className="text-gray-600 body-font mt-20 w-[85%] mx-auto">
