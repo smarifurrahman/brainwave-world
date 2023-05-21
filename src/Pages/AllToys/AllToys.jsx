@@ -39,6 +39,7 @@ const AllToys = () => {
                     {/* head */}
                     <thead>
                         <tr>
+                            <th>Sl.</th>
                             <th>Seller Name</th>
                             <th>Toy Name</th>
                             <th>Sub Category</th>
