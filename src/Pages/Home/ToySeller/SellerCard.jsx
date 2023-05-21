@@ -1,8 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
+import Spinner from "../../Shared/Spinner/Spinner";
 
 const SellerCard = () => {
     const { user } = useContext(AuthContext);
+
+    if (!user) {
+        return <Spinner></Spinner>
+    }
 
     return (
         <div className="p-4 lg:w-1/4 md:w-1/2">

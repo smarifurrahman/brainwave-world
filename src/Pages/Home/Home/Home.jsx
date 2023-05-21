@@ -4,10 +4,9 @@ import Gallery from "../Gallery/Gallery";
 import ShopByCategory from "../ShopByCategory/ShopByCategory";
 import { createContext } from "react";
 import ToySeller from "../ToySeller/ToySeller";
-
+import Subscribe from "../Subscribe/Subscribe";
 
 export const ToyContext = createContext(null);
-
 
 const Home = () => {
     const toys = useLoaderData();
@@ -20,6 +19,7 @@ const Home = () => {
                 <Gallery></Gallery>
                 <ShopByCategory></ShopByCategory>
                 <ToySeller></ToySeller>
+                <Subscribe></Subscribe>
             </ToyContext.Provider>
         </div>
     );
