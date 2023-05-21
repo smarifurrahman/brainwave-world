@@ -12,9 +12,10 @@ const ToySeller = () => {
             <section className="text-gray-600 body-font">
                 <div className="container mx-auto">
                     <div className="flex flex-wrap -m-4">
-                        {
-                            <SellerCard></SellerCard>
-                        }
+                        {<SellerCard></SellerCard>}
+                        {<SellerCard></SellerCard>}
+                        {<SellerCard></SellerCard>}
+                        {<SellerCard></SellerCard>}
                     </div>
                 </div>
             </section>
