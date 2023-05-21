@@ -6,9 +6,9 @@ const CategoryToyCard = ({ toy }) => {
     const { _id, toyPhoto, toyName, toyPrice, toyRating } = toy;
 
     return (
-        <div className="card min-w-[300px] bg-base-100 shadow-xl">
+        <div className="card min-w-[200px] bg-base-100 shadow-xl">
             <figure>
-                <img className='h-[250px] w-full object-cover' src={toyPhoto} alt="Shoes" />
+                <img className='h-[260px] w-full object-cover' src={toyPhoto} alt="Shoes" />
             </figure>
             <div className="card-body">
                 <h2 className="font-bold text-xl text-center">{toyName}</h2>

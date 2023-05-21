@@ -26,7 +26,7 @@ const CategoryPanel = ({ category }) => {
     return (
         <div>
             <h2>{category}</h2>
-            <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-6'>
+            <div className='grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6'>
                 {
                     toys.map(toy => <CategoryToyCard
                         key={toy._id}
