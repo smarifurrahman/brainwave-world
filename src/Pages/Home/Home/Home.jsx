@@ -3,6 +3,7 @@ import Banner from "../Banner/Banner";
 import Gallery from "../Gallery/Gallery";
 import ShopByCategory from "../ShopByCategory/ShopByCategory";
 import { createContext } from "react";
+import ToySeller from "../ToySeller/ToySeller";
 
 
 export const ToyContext = createContext(null);
@@ -18,6 +19,7 @@ const Home = () => {
             <ToyContext.Provider value={toyInfo} >
                 <Gallery></Gallery>
                 <ShopByCategory></ShopByCategory>
+                <ToySeller></ToySeller>
             </ToyContext.Provider>
         </div>
     );
