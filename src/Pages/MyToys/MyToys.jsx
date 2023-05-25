@@ -8,8 +8,9 @@ const MyToys = () => {
     const [toys, setToys] = useState([]);
     const { user } = useContext(AuthContext);
     const [loading, setLoading] = useState(true);
+    const [asc, setAsc] = useState(true);
 
-    const url = `https://brainwave-world-server.vercel.app/toys?email=${user.email}`;
+    const url = `https://brainwave-world-server.vercel.app/toys?email=${user.email}&sort=${asc ? 'asc' : 'desc'}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -63,6 +64,13 @@ const MyToys = () => {
                 <h2 className='text-dark hover:text-primary-color text-4xl font-bold mb-3'>My Toys</h2>
             </div>
             <div className="overflow-x-auto w-full">
+                <div className="flex justify-end mb-5">
+                    <button
+                        className="btn bg-primary-color hover:bg-secondary-color border-primary-color hover:border-secondary-color"
+                        onClick={() => setAsc(!asc)}>
+                        {asc ? 'Price: High to Low' : 'Price: Low to High'}
+                    </button>
+                </div>
                 <table className="table w-full">
                     {/* head */}
                     <thead>
